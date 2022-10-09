@@ -19,28 +19,41 @@ $(document).ready(function () {
           mutation.target.classList.contains("fp-completely") &&
           mutation.target.classList.contains("first_section")
         ) {
-          console.log("first_section");
+          // console.log("first_section");
           img1.style.display = "block";
           img2.style.display = "none";
           img3.style.display = "none";
+          first_section.classList.add("flash_light");
+          second_section.classList.remove("flash_light");
+          third_section.classList.remove("flash_light");
+          
+
         }
         if (
           mutation.target.classList.contains("fp-completely") &&
           mutation.target.classList.contains("second_section")
         ) {
-          console.log("second_section");
+          // console.log("second_section");
           img1.style.display = "none";
           img2.style.display = "block";
           img3.style.display = "none";
+
+          first_section.classList.remove("flash_light");
+          second_section.classList.add("flash_light");
+          third_section.classList.remove("flash_light");
         }
         if (
           mutation.target.classList.contains("fp-completely") &&
           mutation.target.classList.contains("third_section")
         ) {
-          console.log("third_section");
+          // console.log("third_section");
           img1.style.display = "none";
           img2.style.display = "none";
           img3.style.display = "block";
+
+          first_section.classList.remove("flash_light");
+          second_section.classList.remove("flash_light");
+          third_section.classList.add("flash_light");
         }
       }
     });
@@ -51,3 +64,5 @@ $(document).ready(function () {
   observer.observe(second_section, options);
   observer.observe(third_section, options);
 });
+
+
