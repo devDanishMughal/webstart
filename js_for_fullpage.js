@@ -13,3 +13,5 @@ function callback(mutationList, observer) {
 
 const observer = new MutationObserver(callback);
 observer.observe(section, options);
+
+console.log("ssdasdas")
